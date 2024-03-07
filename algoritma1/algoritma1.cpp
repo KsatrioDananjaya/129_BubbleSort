@@ -37,9 +37,17 @@ void display() {
     cout << endl;
 }
 
+void bubbleSortArray() {
+    int pass = 1;
 
-int main()
-{
-    std::cout << "Hello World!\n";
+    for (pass; pass <= n - 1; pass + 1) {
+        for (int j = 0; j <= n - 1 - pass; j++) {
+            if (a[j] > a[j + 1]) {
+                int temp = a[j];
+                a[j] = a[j + 1];
+                a[j + 1] = temp;
+            }
+        }
+    }
 }
 
